@@ -1,0 +1,15 @@
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\SoftwareApp.exe
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\SoftwareApp.deps.json
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\SoftwareApp.runtimeconfig.json
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\SoftwareApp.dll
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\SoftwareApp.pdb
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.AssemblyInfoInputs.cache
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.AssemblyInfo.cs
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.csproj.CoreCompileInputs.cache
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.sourcelink.json
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.dll
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\refint\SoftwareApp.dll
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.pdb
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.genruntimeconfig.cache
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\ref\SoftwareApp.dll
