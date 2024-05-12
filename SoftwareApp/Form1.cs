@@ -1,15 +1,20 @@
-namespace SoftwareApp;
-
-public partial class Form1 : Form
+namespace SoftwareApp
 {
-    public Form1()
+    public partial class Form1 : Form
     {
-        InitializeComponent();
-        Button1.Click += Button1_Click;
-    }
-    private void Button1_Click(object sender, EventArgs e)
-    {
-        Form2 form2 = new Form2();
-        form2.Show();
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        private void frm_menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
     }
 }

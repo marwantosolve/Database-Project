@@ -3,6 +3,8 @@ D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\S
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\SoftwareApp.runtimeconfig.json
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\SoftwareApp.dll
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\SoftwareApp.pdb
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form1.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.csproj.GenerateResource.cache
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.GeneratedMSBuildEditorConfig.editorconfig
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.AssemblyInfoInputs.cache
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.AssemblyInfo.cs
@@ -13,3 +15,6 @@ D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\r
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.pdb
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.genruntimeconfig.cache
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\ref\SoftwareApp.dll
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form2.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form3.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form4.resources
