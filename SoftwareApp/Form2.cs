@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,19 +38,21 @@ namespace SoftwareApp
             {
                 conn.Open();
 
-                string Insert = "INSERT INTO User VALUES " + "(@id, @name, @email, @pass, @type)";
+                string Insert = "INSERT INTO User VALUES " + "(@id, @name, @email, @pass, @rule)";
                 SqlCommand command = new SqlCommand(Insert, conn);
 
-                //command.Parameters.AddWithValue("@id", .Text);
-                //command.Parameters.AddWithValue("@name", .Text); //YYYY-MM-DD
-                //command.Parameters.AddWithValue("@email", .Text);
-                //command.Parameters.AddWithValue("@pass", .Text);
-                //command.Parameters.AddWithValue("@type", .Checked ? "Admin");
-                //command.Parameters.AddWithValue("@type", .Checked ? "Organizer");
-                //command.Parameters.AddWithValue("@type", .Checked ? "Customer");
+                command.Parameters.AddWithValue("@id", textBox4.Text);
+                command.Parameters.AddWithValue("@name", textBox2.Text);
+                command.Parameters.AddWithValue("@email", textBox1.Text);
+                command.Parameters.AddWithValue("@pass", textBox3.Text);
+                command.Parameters.AddWithValue("@type", radioButton1.Checked ? "Admin" : 0);
+                command.Parameters.AddWithValue("@type", radioButton2.Checked ? "Organizer" : 0);
+                command.Parameters.AddWithValue("@type", radioButton3.Checked ? "Customer" : 0);
 
 
                 command.ExecuteNonQuery();
+
+                MessageBox.Show("You've Registered your Account Successfully\n Go and LOGIN NOW!");
 
                 conn.Close();
             }

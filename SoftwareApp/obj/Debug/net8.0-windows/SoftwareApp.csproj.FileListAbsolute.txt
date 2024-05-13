@@ -17,3 +17,11 @@ D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\S
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\ref\SoftwareApp.dll
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form2.resources
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Properties.Resources.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.csproj.AssemblyReference.cache
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\Software.B425BCC0.Up2Date

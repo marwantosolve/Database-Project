@@ -41,10 +41,15 @@
             pictureBox1 = new PictureBox();
             pictureBox4 = new PictureBox();
             button2 = new Button();
+            groupBox1 = new GroupBox();
+            radioButton3 = new RadioButton();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // button3
@@ -184,7 +189,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.Beige;
-            button2.Location = new Point(101, 334);
+            button2.Location = new Point(96, 387);
             button2.Name = "button2";
             button2.Size = new Size(153, 42);
             button2.TabIndex = 23;
@@ -192,12 +197,65 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(radioButton3);
+            groupBox1.Controls.Add(radioButton2);
+            groupBox1.Controls.Add(radioButton1);
+            groupBox1.Cursor = Cursors.IBeam;
+            groupBox1.FlatStyle = FlatStyle.Flat;
+            groupBox1.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBox1.ForeColor = Color.FromArgb(0, 64, 64);
+            groupBox1.Location = new Point(23, 316);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(326, 54);
+            groupBox1.TabIndex = 24;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Pick your rule:";
+            // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.Cursor = Cursors.Hand;
+            radioButton3.Location = new Point(217, 26);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(103, 22);
+            radioButton3.TabIndex = 2;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "Customer";
+            radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Cursor = Cursors.Hand;
+            radioButton2.Location = new Point(100, 26);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(101, 22);
+            radioButton2.TabIndex = 1;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Organizer";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Cursor = Cursors.Hand;
+            radioButton1.Location = new Point(6, 26);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(75, 22);
+            radioButton1.TabIndex = 0;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Admin";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
-            ClientSize = new Size(369, 409);
+            ClientSize = new Size(369, 453);
+            Controls.Add(groupBox1);
             Controls.Add(button2);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox1);
@@ -219,6 +277,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -237,5 +297,9 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox4;
         private Button button2;
+        private GroupBox groupBox1;
+        private RadioButton radioButton3;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
     }
 }
