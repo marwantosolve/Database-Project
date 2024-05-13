@@ -16,5 +16,4 @@ D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\S
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.genruntimeconfig.cache
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\ref\SoftwareApp.dll
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form2.resources
-D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form3.resources
-D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form4.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Properties.Resources.resources
