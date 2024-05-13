@@ -37,28 +37,41 @@ namespace SoftwareApp
             try
             {
                 conn.Open();
-
-                string Insert = "INSERT INTO User VALUES " + "(@id, @name, @email, @pass, @rule)";
-                SqlCommand command = new SqlCommand(Insert, conn);
-
-                command.Parameters.AddWithValue("@id", textBox4.Text);
-                command.Parameters.AddWithValue("@name", textBox2.Text);
-                command.Parameters.AddWithValue("@email", textBox1.Text);
-                command.Parameters.AddWithValue("@pass", textBox3.Text);
-                command.Parameters.AddWithValue("@type", radioButton1.Checked ? "Admin" : 0);
-                command.Parameters.AddWithValue("@type", radioButton2.Checked ? "Organizer" : 0);
-                command.Parameters.AddWithValue("@type", radioButton3.Checked ? "Customer" : 0);
-
-
-                command.ExecuteNonQuery();
-
-                MessageBox.Show("You've Registered your Account Successfully\n Go and LOGIN NOW!");
+                MessageBox.Show("Connection Opened!");
+                string Insert = "INSERT INTO [USER] VALUES (@id, @name, @email, @pass, @rule);";
+                using (SqlCommand command = new SqlCommand(Insert, conn))
+                {
+                    command.Parameters.AddWithValue("@id", textBox4.Text);
+                    command.Parameters.AddWithValue("@name", textBox2.Text);
+                    command.Parameters.AddWithValue("@email", textBox1.Text);
+                    command.Parameters.AddWithValue("@pass", textBox3.Text);
+                    String rule = "";
+                    if (radioButton1.Checked)
+                    {
+                        rule = "Admin";
+                    }
+                    else if (radioButton2.Checked)
+                    {
+                        rule = "Organizer";
+                    }
+                    else if (radioButton3.Checked)
+                    {
+                        rule = "Customer";
+                    }
+                    else
+                    {
+                        MessageBox.Show("You have to select a rule !");
+                    }
+                    command.Parameters.AddWithValue("@rule", rule);
+                    command.ExecuteNonQuery();
+                }
+                MessageBox.Show("You've Registered your Account Successfully\nGo and LOGIN NOW!");
 
                 conn.Close();
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
     }
