@@ -35,5 +35,18 @@
         }
 
         #endregion
+
+        private Button button3;
+        private Label label3;
+        private CheckBox checkBox1;
+        private TextBox textBox3;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private TextBox textBox4;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox4;
+        private Button button2;
     }
 }
