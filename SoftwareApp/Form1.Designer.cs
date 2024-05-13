@@ -38,11 +38,11 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             label3 = new Label();
-            label4 = new Label();
             label5 = new Label();
             textBox3 = new TextBox();
             button2 = new Button();
             checkBox1 = new CheckBox();
+            button3 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -85,6 +85,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(0, 64, 64);
+            button1.Cursor = Cursors.Hand;
             button1.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 64);
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
@@ -151,18 +152,6 @@
             label3.TabIndex = 6;
             label3.Text = "Login Account";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Verdana", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Teal;
-            label4.Location = new Point(790, -3);
-            label4.Name = "label4";
-            label4.Size = new Size(36, 34);
-            label4.TabIndex = 7;
-            label4.Text = "X";
-            label4.Click += label4_Click;
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -189,6 +178,7 @@
             // button2
             // 
             button2.BackColor = Color.Teal;
+            button2.Cursor = Cursors.Hand;
             button2.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 64);
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
@@ -204,6 +194,7 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
+            checkBox1.Cursor = Cursors.Hand;
             checkBox1.Font = new Font("Verdana", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
             checkBox1.ForeColor = Color.FromArgb(0, 64, 64);
             checkBox1.Location = new Point(660, 290);
@@ -214,17 +205,35 @@
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.Beige;
+            button3.BackgroundImageLayout = ImageLayout.None;
+            button3.Cursor = Cursors.Hand;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
+            button3.ForeColor = Color.FromArgb(0, 64, 64);
+            button3.Location = new Point(781, -3);
+            button3.Margin = new Padding(0);
+            button3.Name = "button3";
+            button3.Size = new Size(44, 41);
+            button3.TabIndex = 11;
+            button3.Text = "X";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
             ClientSize = new Size(820, 483);
+            Controls.Add(button3);
             Controls.Add(checkBox1);
             Controls.Add(button2);
             Controls.Add(textBox3);
             Controls.Add(label5);
-            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
@@ -254,10 +263,10 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private Label label3;
-        private Label label4;
         private Label label5;
         private TextBox textBox3;
         private Button button2;
         private CheckBox checkBox1;
+        private Button button3;
     }
 }
