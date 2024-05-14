@@ -37,35 +37,34 @@ namespace SoftwareApp
             try
             {
                 conn.Open();
-                MessageBox.Show("Connection Opened!");
-                string Insert = "INSERT INTO [USER] VALUES (@id, @name, @email, @pass, @rule);";
-                using (SqlCommand command = new SqlCommand(Insert, conn))
+                string insert = "INSERT INTO [USER] VALUES (@id, @name, @email, @pass, @role);";
+                using (SqlCommand command = new SqlCommand(insert, conn))
                 {
                     command.Parameters.AddWithValue("@id", textBox4.Text);
                     command.Parameters.AddWithValue("@name", textBox2.Text);
                     command.Parameters.AddWithValue("@email", textBox1.Text);
                     command.Parameters.AddWithValue("@pass", textBox3.Text);
-                    String rule = "";
+                    String role = "";
                     if (radioButton1.Checked)
                     {
-                        rule = "Admin";
+                        role = "Admin";
                     }
                     else if (radioButton2.Checked)
                     {
-                        rule = "Organizer";
+                        role = "Organizer";
                     }
                     else if (radioButton3.Checked)
                     {
-                        rule = "Customer";
+                        role = "Customer";
                     }
                     else
                     {
-                        MessageBox.Show("You have to select a rule !");
+                        MessageBox.Show("You have to select a role !");
                     }
-                    command.Parameters.AddWithValue("@rule", rule);
+                    command.Parameters.AddWithValue("@role", role);
                     command.ExecuteNonQuery();
                 }
-                MessageBox.Show("You've Registered your Account Successfully\nGo and LOGIN NOW!");
+                MessageBox.Show("You've Registered your Account Successfully ✓\nGo LOGIN NOW !");
 
                 conn.Close();
             }

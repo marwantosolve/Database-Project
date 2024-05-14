@@ -53,7 +53,7 @@ go
       FULLNAME varchar(30) not null,
       EMAIL varchar(40) not null,
       PASSWORD varchar(10) not null,
-      "RULE" varchar(10) not null,
+      ROLE varchar(10) not null,
       constraint PK_USER primary key (ID)
    )
 go

@@ -211,7 +211,7 @@
             groupBox1.Size = new Size(326, 54);
             groupBox1.TabIndex = 24;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Pick your rule:";
+            groupBox1.Text = "Select your role:";
             // 
             // radioButton3
             // 
