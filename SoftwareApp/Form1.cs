@@ -35,15 +35,11 @@ namespace SoftwareApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string connString = "Server= localhost; Database= FCI; Integrated Security=True;";
+            string connString = "Server=localhost; Database=EventDB; Integrated Security=True;";
             SqlConnection conn = new SqlConnection(connString);
             try
             {
                 conn.Open();
-                string select = "SELECT * FROM [User] WHERE EMAIL = '@email' AND PASSWORD = '@pass' AND ROLE = '@role';";
-                SqlCommand command = new SqlCommand(select, conn);
-                command.Parameters.AddWithValue("@email", textBox1.Text);
-                command.Parameters.AddWithValue("@pass", textBox3.Text);
                 String role = "";
                 if (radioButton1.Checked)
                 {
@@ -56,43 +52,48 @@ namespace SoftwareApp
                 else if (radioButton3.Checked)
                 {
                     role = "Customer";
-                } else
+                }
+                else
                 {
-                    MessageBox.Show("Please, Select your Role !");
+                    MessageBox.Show("Please, Select your Role !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     radioButton1.Checked = false;
                     radioButton2.Checked = false;
                     radioButton3.Checked = false;
+                    return;
                 }
-                command.Parameters.AddWithValue("@rule", role);
-                SqlDataAdapter da = new SqlDataAdapter(command);
+                string select = "SELECT * FROM [User] WHERE EMAIL = '"+textBox1.Text+"' AND PASSWORD = '"+textBox3.Text+"' AND ROLE = '"+role+"';";
+                SqlDataAdapter da = new SqlDataAdapter(select,conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                if (dt.Rows.Count > 0)
+                if (dt.Rows.Count == 1)
                 {
                    if (role == "Admin" || role == "Organizer")
                    {
-                        this.Hide();
                         Form3 adminForm = new Form3();
                         adminForm.Show();
+                        this.Hide();
                    } 
                    else
                    {
+                        Form4 CustForm = new Form4();
+                        CustForm.Show();
                         this.Hide();
-                        Form4 adminForm = new Form4();
-                        adminForm.Show();
-                    }
+                   }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid LOGIN Information !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox1.Clear();
+                    textBox3.Clear();
+                    radioButton1.Checked = false;
+                    radioButton2.Checked = false;
+                    radioButton3.Checked = false;
                 }
                 conn.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
-                MessageBox.Show("Invalid LOGIN Information !");
-                textBox1.Clear();
-                textBox3.Clear();
-                radioButton1.Checked = false;
-                radioButton2.Checked = false;
-                radioButton3.Checked = false;
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

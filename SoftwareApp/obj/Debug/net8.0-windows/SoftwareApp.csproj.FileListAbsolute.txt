@@ -25,3 +25,5 @@ D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\r
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.csproj.AssemblyReference.cache
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\Software.B425BCC0.Up2Date
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form3.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form4.resources
