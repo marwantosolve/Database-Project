@@ -36,7 +36,12 @@ namespace SoftwareApp
             SqlConnection conn = new SqlConnection(connString);
             try
             {
-               
+
+                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked))
+                {
+                    MessageBox.Show("You must complete your information first !","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 conn.Open();
                 string insert = "INSERT INTO [USER] VALUES (@id, @name, @email, @pass, @role);";
                 using (SqlCommand command = new SqlCommand(insert, conn))
@@ -60,12 +65,12 @@ namespace SoftwareApp
                     }
                     else
                     {
-                        MessageBox.Show("You have to select a role !");
+                        return;
                     }
                     command.Parameters.AddWithValue("@role", role);
                     command.ExecuteNonQuery();
                 }
-                MessageBox.Show("You've Registered your Account Successfully ✓\nGo LOGIN NOW !");
+               MessageBox.Show("You've Registered your Account Successfully ✓\nGo LOGIN NOW !", "Registered Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 conn.Close();
             }

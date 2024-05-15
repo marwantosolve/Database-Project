@@ -27,3 +27,15 @@ D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\S
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\Software.B425BCC0.Up2Date
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form3.resources
 D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form4.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form10.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form11.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form12.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form13.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form14.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form15.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form16.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form5.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form6.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form7.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form8.resources
+D:\FCAI\DataBase Systems\Database Project\SoftwareApp\obj\Debug\net8.0-windows\SoftwareApp.Form9.resources
