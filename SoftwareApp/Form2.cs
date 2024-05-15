@@ -36,6 +36,7 @@ namespace SoftwareApp
             SqlConnection conn = new SqlConnection(connString);
             try
             {
+               
                 conn.Open();
                 string insert = "INSERT INTO [USER] VALUES (@id, @name, @email, @pass, @role);";
                 using (SqlCommand command = new SqlCommand(insert, conn))

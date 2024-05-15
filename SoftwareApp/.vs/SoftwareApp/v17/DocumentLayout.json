@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\FCAI\\DataBase Systems\\Database Project\\SoftwareApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9FA00349-F245-4539-A4A5-3E500E725532}|SoftwareApp.csproj|d:\\fcai\\database systems\\database project\\softwareapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FA00349-F245-4539-A4A5-3E500E725532}|SoftwareApp.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9FA00349-F245-4539-A4A5-3E500E725532}|SoftwareApp.csproj|d:\\fcai\\database systems\\database project\\softwareapp\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA00349-F245-4539-A4A5-3E500E725532}|SoftwareApp.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FA00349-F245-4539-A4A5-3E500E725532}|SoftwareApp.csproj|d:\\fcai\\database systems\\database project\\softwareapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9FA00349-F245-4539-A4A5-3E500E725532}|SoftwareApp.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9FA00349-F245-4539-A4A5-3E500E725532}|SoftwareApp.csproj|d:\\fcai\\database systems\\database project\\softwareapp\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9FA00349-F245-4539-A4A5-3E500E725532}|SoftwareApp.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,26 +23,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\FCAI\\DataBase Systems\\Database Project\\SoftwareApp\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "D:\\FCAI\\DataBase Systems\\Database Project\\SoftwareApp\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAowDUAAAAmAAAA",
+              "Title": "Form2.cs",
+              "DocumentMoniker": "D:\\FCAI\\DataBase Systems\\Database Project\\SoftwareApp\\Form2.cs",
+              "RelativeDocumentMoniker": "Form2.cs",
+              "ToolTip": "D:\\FCAI\\DataBase Systems\\Database Project\\SoftwareApp\\Form2.cs",
+              "RelativeToolTip": "Form2.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAkwDMAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T18:18:04.49Z",
+              "WhenOpened": "2024-05-15T22:33:54.817Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\FCAI\\DataBase Systems\\Database Project\\SoftwareApp\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "D:\\FCAI\\DataBase Systems\\Database Project\\SoftwareApp\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "D:\\FCAI\\DataBase Systems\\Database Project\\SoftwareApp\\Form2.cs",
+              "RelativeDocumentMoniker": "Form2.cs",
+              "ToolTip": "D:\\FCAI\\DataBase Systems\\Database Project\\SoftwareApp\\Form2.cs [Design]",
+              "RelativeToolTip": "Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T18:17:55.892Z",
+              "WhenOpened": "2024-05-15T22:33:50.825Z",
               "EditorCaption": " [Design]"
             }
           ]
