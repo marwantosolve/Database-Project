@@ -39,57 +39,90 @@ namespace SoftwareApp
             SqlConnection conn = new SqlConnection(connString);
             try
             {
-                conn.Open();
-                String role = "";
-                if (radioButton1.Checked)
+                if (textBox1.Text == "" || textBox3.Text == "" || (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked))
                 {
-                    role = "Admin";
-                }
-                else if (radioButton2.Checked)
-                {
-                    role = "Organizer";
-                }
-                else if (radioButton3.Checked)
-                {
-                    role = "Customer";
-                }
-                else
-                {
-                    MessageBox.Show("Please, Select your Role !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    radioButton1.Checked = false;
-                    radioButton2.Checked = false;
-                    radioButton3.Checked = false;
+                    MessageBox.Show("You must complete your information first !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                string select = "SELECT * FROM [User] WHERE EMAIL = '"+textBox1.Text+"' AND PASSWORD = '"+textBox3.Text+"' AND ROLE = '"+role+"';";
-                SqlDataAdapter da = new SqlDataAdapter(select,conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                if (dt.Rows.Count == 1)
+                if (radioButton1.Checked)
                 {
-                   if (role == "Admin" || role == "Organizer")
-                   {
+                    // Admin
+                    conn.Open();
+                    string select = "SELECT * FROM [ADMIN] WHERE EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
+                    SqlDataAdapter da = new SqlDataAdapter(select, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    if (dt.Rows.Count == 1)
+                    {
                         Form3 adminForm = new Form3();
                         adminForm.Show();
                         this.Hide();
-                   } 
-                   else
-                   {
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid LOGIN Information !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBox1.Clear();
+                        textBox3.Clear();
+                        radioButton1.Checked = false;
+                        radioButton2.Checked = false;
+                        radioButton3.Checked = false;
+                    }
+                    conn.Close();
+                }
+                else if (radioButton2.Checked)
+                {
+
+                    conn.Open();
+                    string select = "SELECT * FROM [ORGANIZER] WHERE EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
+                    SqlDataAdapter da = new SqlDataAdapter(select, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    if (dt.Rows.Count == 1)
+                    {
+                        Form3 adminForm = new Form3();
+                        adminForm.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid LOGIN Information !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBox1.Clear();
+                        textBox3.Clear();
+                        radioButton1.Checked = false;
+                        radioButton2.Checked = false;
+                        radioButton3.Checked = false;
+                    }
+                    conn.Close();
+                }
+                else if (radioButton3.Checked)
+                {
+
+                    conn.Open();
+                    string select = "SELECT * FROM [CUSTOMER] WHERE EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
+                    SqlDataAdapter da = new SqlDataAdapter(select, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    if (dt.Rows.Count == 1)
+                    {
                         Form4 CustForm = new Form4();
                         CustForm.Show();
                         this.Hide();
-                   }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid LOGIN Information !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBox1.Clear();
+                        textBox3.Clear();
+                        radioButton1.Checked = false;
+                        radioButton2.Checked = false;
+                        radioButton3.Checked = false;
+                    }
+                    conn.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Invalid LOGIN Information !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    textBox1.Clear();
-                    textBox3.Clear();
-                    radioButton1.Checked = false;
-                    radioButton2.Checked = false;
-                    radioButton3.Checked = false;
+                    return;
                 }
-                conn.Close();
             }
             catch (Exception ex)
             {

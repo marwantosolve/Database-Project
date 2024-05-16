@@ -42,37 +42,58 @@ namespace SoftwareApp
                     MessageBox.Show("You must complete your information first !","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                conn.Open();
-                string insert = "INSERT INTO [USER] VALUES (@id, @name, @email, @pass, @role);";
-                using (SqlCommand command = new SqlCommand(insert, conn))
+                if (radioButton1.Checked)
                 {
-                    command.Parameters.AddWithValue("@id", textBox4.Text);
-                    command.Parameters.AddWithValue("@name", textBox2.Text);
-                    command.Parameters.AddWithValue("@email", textBox1.Text);
-                    command.Parameters.AddWithValue("@pass", textBox3.Text);
-                    String role = "";
-                    if (radioButton1.Checked)
+                    // Admin
+                    conn.Open();
+                    string insert = "INSERT INTO [ADMIN] VALUES (@id, @name, @email, @pass);";
+                    using (SqlCommand command = new SqlCommand(insert, conn))
                     {
-                        role = "Admin";
+                        command.Parameters.AddWithValue("@id", textBox4.Text);
+                        command.Parameters.AddWithValue("@name", textBox2.Text);
+                        command.Parameters.AddWithValue("@email", textBox1.Text);
+                        command.Parameters.AddWithValue("@pass", textBox3.Text);
+                        command.ExecuteNonQuery();
                     }
-                    else if (radioButton2.Checked)
-                    {
-                        role = "Organizer";
-                    }
-                    else if (radioButton3.Checked)
-                    {
-                        role = "Customer";
-                    }
-                    else
-                    {
-                        return;
-                    }
-                    command.Parameters.AddWithValue("@role", role);
-                    command.ExecuteNonQuery();
+                    MessageBox.Show("You've Registered your Account Successfully ✓\nGo LOGIN NOW !", "Registered Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conn.Close();
                 }
-               MessageBox.Show("You've Registered your Account Successfully ✓\nGo LOGIN NOW !", "Registered Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                conn.Close();
+                else if (radioButton2.Checked)
+                {
+                    // Organizer
+                    conn.Open();
+                    string insert = "INSERT INTO [ORGANIZER] VALUES (@id, @name, @email, @pass);";
+                    using (SqlCommand command = new SqlCommand(insert, conn))
+                    {
+                        command.Parameters.AddWithValue("@id", textBox4.Text);
+                        command.Parameters.AddWithValue("@name", textBox2.Text);
+                        command.Parameters.AddWithValue("@email", textBox1.Text);
+                        command.Parameters.AddWithValue("@pass", textBox3.Text);
+                        command.ExecuteNonQuery();
+                    }
+                    MessageBox.Show("You've Registered your Account Successfully ✓\nGo LOGIN NOW !", "Registered Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conn.Close();
+                }
+                else if (radioButton3.Checked)
+                {
+                    // Customer
+                    conn.Open();
+                    string insert = "INSERT INTO [CUSTOMER] VALUES (@id, @name, @email, @pass);";
+                    using (SqlCommand command = new SqlCommand(insert, conn))
+                    {
+                        command.Parameters.AddWithValue("@id", textBox4.Text);
+                        command.Parameters.AddWithValue("@name", textBox2.Text);
+                        command.Parameters.AddWithValue("@email", textBox1.Text);
+                        command.Parameters.AddWithValue("@pass", textBox3.Text);
+                        command.ExecuteNonQuery();
+                    }
+                    MessageBox.Show("You've Registered your Account Successfully ✓\nGo LOGIN NOW !", "Registered Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conn.Close();
+                }
+                else
+                {
+                    return;
+                }
             }
             catch (Exception ex)
             {

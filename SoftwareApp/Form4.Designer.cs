@@ -71,6 +71,7 @@
             Controls.Add(button3);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form4";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form4";
             ResumeLayout(false);
             PerformLayout();

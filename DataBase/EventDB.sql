@@ -64,7 +64,7 @@ go
    /*==============================================================*/
    create table TICKET (
       ID numeric(8) not null,
-      EVENTID varchar(8) not null,
+      EVENTID numeric(8) not null,
       TYPE varchar(10) not null,
       PRICE numeric(5) not null,
       DATE date not null,
