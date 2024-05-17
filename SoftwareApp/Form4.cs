@@ -21,5 +21,17 @@ namespace SoftwareApp
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form6 deleteAcc = new Form6();
+            deleteAcc.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form5 updateAcc = new Form5();
+            updateAcc.Show();
+        }
     }
 }

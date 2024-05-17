@@ -220,7 +220,7 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
             button3.ForeColor = Color.FromArgb(0, 64, 64);
-            button3.Location = new Point(781, -3);
+            button3.Location = new Point(782, -3);
             button3.Margin = new Padding(0);
             button3.Name = "button3";
             button3.Size = new Size(44, 41);

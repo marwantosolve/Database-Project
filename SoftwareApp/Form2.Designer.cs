@@ -61,7 +61,7 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
             button3.ForeColor = Color.FromArgb(0, 64, 64);
-            button3.Location = new Point(330, -3);
+            button3.Location = new Point(334, -6);
             button3.Margin = new Padding(0);
             button3.Name = "button3";
             button3.Size = new Size(44, 41);
@@ -87,7 +87,7 @@
             checkBox1.Cursor = Cursors.Hand;
             checkBox1.Font = new Font("Verdana", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
             checkBox1.ForeColor = Color.FromArgb(0, 64, 64);
-            checkBox1.Location = new Point(219, 298);
+            checkBox1.Location = new Point(223, 286);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(132, 20);
             checkBox1.TabIndex = 18;
