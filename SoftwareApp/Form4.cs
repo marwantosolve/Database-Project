@@ -48,14 +48,14 @@ namespace SoftwareApp
 
         private void button6_Click(object sender, EventArgs e)
         {
+            Form13 returnTicket = new Form13();
+            returnTicket.Show();
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
             Form14 purchaseTicket = new Form14();
             purchaseTicket.Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Form13 returnTicket = new Form13();
-            returnTicket.Show();
-        }
     }
 }
