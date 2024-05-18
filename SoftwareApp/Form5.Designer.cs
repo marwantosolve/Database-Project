@@ -99,6 +99,7 @@
             checkBox1.TabIndex = 28;
             checkBox1.Text = "Show Password";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // textBox3
             // 
@@ -176,6 +177,7 @@
             checkBox2.TabIndex = 33;
             checkBox2.Text = "Show Password";
             checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
             // 
             // textBox5
             // 
@@ -246,6 +248,7 @@
             button2.TabIndex = 40;
             button2.Text = "Update";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 

@@ -47,11 +47,14 @@
             radioButton3 = new RadioButton();
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
+            pictureBox5 = new PictureBox();
+            textBox2 = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -151,7 +154,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Teal;
-            label3.Location = new Point(414, 154);
+            label3.Location = new Point(413, 104);
             label3.Name = "label3";
             label3.Size = new Size(172, 25);
             label3.TabIndex = 6;
@@ -162,7 +165,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Verdana", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(0, 64, 64);
-            label5.Location = new Point(476, 44);
+            label5.Location = new Point(481, 31);
             label5.Name = "label5";
             label5.Size = new Size(253, 34);
             label5.TabIndex = 8;
@@ -281,12 +284,35 @@
             radioButton1.Text = "Admin";
             radioButton1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(418, 145);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(30, 30);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 28;
+            pictureBox5.TabStop = false;
+            // 
+            // textBox2
+            // 
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Font = new Font("Verdana", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(454, 145);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = "ID:";
+            textBox2.Size = new Size(331, 30);
+            textBox2.TabIndex = 29;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
             ClientSize = new Size(820, 483);
+            Controls.Add(textBox2);
+            Controls.Add(pictureBox5);
             Controls.Add(groupBox1);
             Controls.Add(button3);
             Controls.Add(checkBox1);
@@ -308,6 +334,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -332,5 +359,7 @@
         private RadioButton radioButton3;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
+        private PictureBox pictureBox5;
+        private TextBox textBox2;
     }
 }

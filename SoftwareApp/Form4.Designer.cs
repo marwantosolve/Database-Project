@@ -145,6 +145,7 @@
             button4.TabIndex = 17;
             button4.Text = "Event Search";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -161,6 +162,7 @@
             button5.TabIndex = 18;
             button5.Text = "Show Event Sponsors";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -177,6 +179,7 @@
             button6.TabIndex = 19;
             button6.Text = "Return A Ticket";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -193,6 +196,7 @@
             button7.TabIndex = 20;
             button7.Text = "Purchase A Ticket";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // pictureBox1
             // 

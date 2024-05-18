@@ -64,6 +64,7 @@
             checkBox1.TabIndex = 33;
             checkBox1.Text = "Show Password";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // textBox3
             // 
@@ -123,6 +124,7 @@
             button2.TabIndex = 41;
             button2.Text = "Delete";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 

@@ -33,5 +33,23 @@ namespace SoftwareApp
             Form6 deleteAcc = new Form6();
             deleteAcc.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form7 newEvent = new Form7();
+            newEvent.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form9 setTicket = new Form9();
+            setTicket.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form10 generateReport = new Form10();
+            generateReport.Show();
+        }
     }
 }

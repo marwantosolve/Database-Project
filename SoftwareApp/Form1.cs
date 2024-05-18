@@ -1,10 +1,14 @@
 using System.Data;
 using System.Data.SqlClient;
 
+
+
 namespace SoftwareApp
 {
+    
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -39,7 +43,7 @@ namespace SoftwareApp
             SqlConnection conn = new SqlConnection(connString);
             try
             {
-                if (textBox1.Text == "" || textBox3.Text == "" || (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked))
+                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked))
                 {
                     MessageBox.Show("You must complete your information first !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -48,12 +52,13 @@ namespace SoftwareApp
                 {
                     // Admin
                     conn.Open();
-                    string select = "SELECT * FROM [ADMIN] WHERE EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
+                    string select = "SELECT * FROM [ADMIN] WHERE ID = " + textBox2.Text + " AND EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
                     SqlDataAdapter da = new SqlDataAdapter(select, conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     if (dt.Rows.Count == 1)
                     {
+                        SharedData.role = "Admin";
                         Form3 adminForm = new Form3();
                         adminForm.Show();
                         this.Hide();
@@ -71,14 +76,15 @@ namespace SoftwareApp
                 }
                 else if (radioButton2.Checked)
                 {
-
+                    // Organizer
                     conn.Open();
-                    string select = "SELECT * FROM [ORGANIZER] WHERE EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
+                    string select = "SELECT * FROM [ORGANIZER] WHERE ID = " + textBox2.Text + " AND EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
                     SqlDataAdapter da = new SqlDataAdapter(select, conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     if (dt.Rows.Count == 1)
                     {
+                        SharedData.role = "Organizer";
                         Form3 adminForm = new Form3();
                         adminForm.Show();
                         this.Hide();
@@ -96,14 +102,15 @@ namespace SoftwareApp
                 }
                 else if (radioButton3.Checked)
                 {
-
+                    // Customer
                     conn.Open();
-                    string select = "SELECT * FROM [CUSTOMER] WHERE EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
+                    string select = "SELECT * FROM [CUSTOMER] WHERE ID = " + textBox2.Text + " AND EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
                     SqlDataAdapter da = new SqlDataAdapter(select, conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     if (dt.Rows.Count == 1)
                     {
+                        SharedData.role = "Customer";
                         Form4 CustForm = new Form4();
                         CustForm.Show();
                         this.Hide();

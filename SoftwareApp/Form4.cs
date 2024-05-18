@@ -33,5 +33,29 @@ namespace SoftwareApp
             Form5 updateAcc = new Form5();
             updateAcc.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form11 searchEvent = new Form11();
+            searchEvent.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form12 showSponsor = new Form12();
+            showSponsor.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form14 purchaseTicket = new Form14();
+            purchaseTicket.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form13 returnTicket = new Form13();
+            returnTicket.Show();
+        }
     }
 }
