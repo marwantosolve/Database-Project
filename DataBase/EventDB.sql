@@ -68,8 +68,8 @@ go
       TYPE varchar(10) not null,
       PRICE numeric(5) not null,
       DATE date not null,
-      ISAVALIABLE bit not null,
-      CUSTID numeric(8) not null,
+      ISAVALIABLE bit not null DEFAULT 1,
+      CUSTID numeric(8) null,
       constraint PK_TICKET primary key nonclustered (ID)
    )
 go
