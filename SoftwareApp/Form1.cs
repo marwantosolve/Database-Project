@@ -8,7 +8,6 @@ namespace SoftwareApp
     
     public partial class Form1 : Form
     {
-
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +18,6 @@ namespace SoftwareApp
             Form2 form2 = new Form2();
             form2.Show();
         }
-
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -43,36 +41,36 @@ namespace SoftwareApp
             SqlConnection conn = new SqlConnection(connString);
             try
             {
-                //if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked))
-                //{
-                //    MessageBox.Show("You must complete your information first !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    return;
-                //}
+                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked))
+                {
+                    MessageBox.Show("You must complete your information first !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 if (radioButton1.Checked)
                 {
-                    // Admin
-                    //conn.Open();
-                    //string select = "SELECT * FROM [ADMIN] WHERE ID = " + textBox2.Text + " AND EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
-                    //SqlDataAdapter da = new SqlDataAdapter(select, conn);
-                    //DataTable dt = new DataTable();
-                    //da.Fill(dt);
-                    //if (dt.Rows.Count == 1)
-                    //{
+                    //Admin
+                    conn.Open();
+                    string select = "SELECT * FROM [ADMIN] WHERE ID = " + textBox2.Text + " AND EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
+                    SqlDataAdapter da = new SqlDataAdapter(select, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    if (dt.Rows.Count == 1)
+                    {
                         SharedData.role = "Admin";
                         Form3 adminForm = new Form3();
                         adminForm.Show();
                         this.Hide();
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("Invalid LOGIN Information !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //    textBox1.Clear();
-                    //    textBox3.Clear();
-                    //    radioButton1.Checked = false;
-                    //    radioButton2.Checked = false;
-                    //    radioButton3.Checked = false;
-                    //}
-                    //conn.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid LOGIN Information !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBox1.Clear();
+                        textBox3.Clear();
+                        radioButton1.Checked = false;
+                        radioButton2.Checked = false;
+                        radioButton3.Checked = false;
+                    }
+                    conn.Close();
                 }
                 else if (radioButton2.Checked)
                 {
