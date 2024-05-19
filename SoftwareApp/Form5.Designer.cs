@@ -45,8 +45,8 @@
             pictureBox6 = new PictureBox();
             textBox6 = new TextBox();
             label1 = new Label();
-            button2 = new Button();
             button3 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -233,23 +233,6 @@
             label1.TabIndex = 39;
             label1.Text = "Enter The New Data:";
             // 
-            // button2
-            // 
-            button2.BackColor = Color.Teal;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 64);
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Beige;
-            button2.Location = new Point(116, 465);
-            button2.Name = "button2";
-            button2.Size = new Size(153, 42);
-            button2.TabIndex = 40;
-            button2.Text = "Update";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
             // button3
             // 
             button3.BackColor = Color.Beige;
@@ -267,6 +250,23 @@
             button3.Text = "X";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Teal;
+            button2.Cursor = Cursors.Hand;
+            button2.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 64);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.Beige;
+            button2.Location = new Point(116, 465);
+            button2.Name = "button2";
+            button2.Size = new Size(153, 42);
+            button2.TabIndex = 40;
+            button2.Text = "Update";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // Form5
             // 
@@ -324,7 +324,7 @@
         private PictureBox pictureBox6;
         private TextBox textBox6;
         private Label label1;
-        private Button button2;
         private Button button3;
+        private Button button2;
     }
 }

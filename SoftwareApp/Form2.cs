@@ -39,7 +39,7 @@ namespace SoftwareApp
 
                 if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked))
                 {
-                    MessageBox.Show("You must complete your information first !","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("You must complete your information first !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (radioButton1.Checked)
@@ -99,6 +99,10 @@ namespace SoftwareApp
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
         }
     }
 }

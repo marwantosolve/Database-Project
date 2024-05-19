@@ -8,64 +8,55 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SoftwareApp
 {
     public partial class Form13 : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=RIMAZ\MSSQLSERVER2; Database=Event; Integrated Security=True;Connect Timeout=30;Encrypt=False;");
-        SqlCommand cmd;
         public Form13()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            string connString = "Server= localhost; Database= EventDB; Integrated Security=True;";
+            SqlConnection conn = new SqlConnection(connString);
             try
             {
-                int ticketid = Convert.ToInt32(txt_ticketid.Text);
-                int custid = Convert.ToInt32(txt_custid.Text);
-
-                conn.Open();
-
-                string updateQuery = "UPDATE ticket SET ISAVALIABLE = 1, CUSTID = 'NULL' WHERE CUSTID = @custid AND ID = @ticketid ";
-
-                SqlCommand cmd = new SqlCommand(updateQuery, conn);
-
-                cmd.Parameters.AddWithValue("@ticketid", ticketid);
-                cmd.Parameters.AddWithValue("@custid", custid);
-
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Ticket has been returned successfully.");
-
-                conn.Close();
+                DialogResult result = MessageBox.Show("Are you sure you want to Return your Ticket?", "Confirm Return Process", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    conn.Open();
+                    string sqlQueryInsert = "DELETE FROM [TICKET] WHERE ID = @id AND CUSTID = @cid ;";
+                    SqlCommand command = new SqlCommand(sqlQueryInsert, conn);
+                    command.Parameters.AddWithValue("@id", textBox3.Text);
+                    command.Parameters.AddWithValue("@cid", textBox4.Text);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("You've Returned your Ticket Successfully !", "Returned Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    conn.Close();
+                }
+                else if (result == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    return;
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred while returning the ticket: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void txt_ticketid_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

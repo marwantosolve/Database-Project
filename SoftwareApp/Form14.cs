@@ -9,113 +9,117 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Web;
+using Microsoft.VisualBasic.Logging;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SoftwareApp
 {
     public partial class Form14 : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=RIMAZ\MSSQLSERVER2; Database=Event; Integrated Security=True;Connect Timeout=30;Encrypt=False;");
-        SqlCommand cmd;
-        SqlDataReader dr;
         public Form14()
         {
             InitializeComponent();
-
-            ViewTickets();
-            
-            
-
-
         }
 
-        //Display the data on grind viewer
-        void ViewTickets()
+        private void Form14_Load(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("SELECT ticket.id, event.name, ticket.price, ticket.date FROM ticket, event WHERE ticket.eventid = event.id AND ticket.ISAVALIABLE = 1;", conn);
-            conn.Open();
-            dr = cmd.ExecuteReader();
-
-            DataTable dt = new DataTable();
-            dt.Load(dr);
-            dataGridView.DataSource = dt;
-
-            dr.Close();
-            conn.Close();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button_purchase_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(text_userid.Text))
+            string connString = "Server= localhost; Database= EventDB; Integrated Security=True;";
+            SqlConnection conn = new SqlConnection(connString);
+            try
             {
-                MessageBox.Show("Please enter user ID");
-            }
-            else if(dataGridView.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Choose a ticket.");
-            }
-
-            else if (dataGridView.SelectedRows.Count > 0 && !(string.IsNullOrEmpty(text_userid.Text)))
-            {
-                try
+                conn.Open();
+                string sqlQuerySelect = "SELECT [NAME] FROM EVENT;";
+                SqlCommand command = new SqlCommand(sqlQuerySelect, conn);
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    var selectedRow = dataGridView.SelectedRows[0]; //gets the first row selected
-                    int ticketId = Convert.ToInt32(selectedRow.Cells["id"].Value); 
-                    int userid = Convert.ToInt32(text_userid.Text);
-
-                    conn.Open();
-
-                    string updateQuery = "UPDATE ticket SET ISAVALIABLE = 0, CUSTID = @userid WHERE id = @ticketId";
-                    
-                    SqlCommand cmd = new SqlCommand(updateQuery, conn);
-                    cmd.Parameters.AddWithValue("@ticketId", ticketId);
-                    cmd.Parameters.AddWithValue("@userid", userid);
-
-                    cmd.ExecuteNonQuery();
-            
-
+                    while (reader.Read())
+                    {
+                        string eventName = reader.GetString("NAME");
+                        comboBox1.Items.Add(eventName);
+                    }
                     conn.Close();
-
-
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred: " + ex.Message);
-                }
-                
             }
-            
-
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            
+            string? eventName = comboBox1.SelectedItem != null ? comboBox1.SelectedItem.ToString() : "";
+            int custID = SharedData.custID;
+            string type = "";
+            if (radioButton1.Checked)
+            {
+                type = "Platinum";
+            }
+            else if (radioButton2.Checked)
+            {
+                type = "Gold";
+            }
+            else if (radioButton3.Checked)
+            {
+                type = "Silver";
+            }
+            string connString = "Server= localhost; Database= EventDB; Integrated Security=True;";
+            SqlConnection conn = new SqlConnection(connString);
+            try
+            {
+                conn.Open();
 
+                string sqlQuerySelect =
+                "SELECT TICKET.ID, TICKET.PRICE, TICKET.DATE " +
+                "FROM [TICKET] " +
+                "INNER JOIN [EVENT] ON TICKET.EVENTID = EVENT.ID " +
+                "WHERE EVENT.NAME = @eventName " +
+                "AND TICKET.ISAVALIABLE = 1 " +
+                "AND TICKET.TYPE = @type;";
+                SqlCommand command = new SqlCommand(sqlQuerySelect, conn);
+                command.Parameters.AddWithValue("@eventName", eventName);
+                command.Parameters.AddWithValue("@type", type);
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    DataTable dt = new DataTable();
+                    dt.Load(reader);
+                    dataGridView1.DataSource = dt;
+                }
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int custID = SharedData.custID;
+            var selectedRow = dataGridView1.SelectedRows[0];
+            int ticketID = Convert.ToInt32(selectedRow.Cells["id"].Value);
+            string connString = "Server= localhost; Database= EventDB; Integrated Security=True;";
+            SqlConnection conn = new SqlConnection(connString);
+            try
+            {
+                conn.Open();
+                string updateQuery = "UPDATE [TICKET] SET ISAVALIABLE = 0, CUSTID = @custID WHERE ID = @ticketID";
+                SqlCommand cmd = new SqlCommand(updateQuery, conn);
+                cmd.Parameters.AddWithValue("@ticketID", ticketID);
+                cmd.Parameters.AddWithValue("@custID", custID);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("You've Purchased the Ticket Successfully !", "Purchased Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
