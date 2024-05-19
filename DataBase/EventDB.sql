@@ -3,7 +3,7 @@
 /*==============================================================*/
 create table ADMIN (
    ID numeric(8) not null,
-   FULLNAME varchar(30) not null,
+   FULLNAME varchar(40) not null,
    EMAIL varchar(40) not null,
    PASSWORD varchar(10) not null,
    constraint PK_ADMIN primary key (ID)
@@ -14,7 +14,7 @@ go
    /*==============================================================*/
    create table CUSTOMER (
       ID numeric(8) not null,
-      FULLNAME varchar(30) not null,
+      FULLNAME varchar(40) not null,
       EMAIL varchar(40) not null,
       PASSWORD varchar(10) not null,
       constraint PK_CUSTOMER primary key (ID)
@@ -24,10 +24,10 @@ go
    /* Table: EVENT                                                 */
    /*==============================================================*/
    create table EVENT (
-      ID numeric(8) not null,
-      NAME varchar(15) not null,
-      TYPE varchar(10) not null,
-      LOCATION varchar(15) not null,
+      ID numeric(8) IDENTITY(1, 1) not null,
+      NAME varchar(20) not null,
+      TYPE varchar(20) not null,
+      LOCATION varchar(50) not null,
       DATE date not null,
       constraint PK_EVENT primary key nonclustered (ID)
    )
@@ -37,7 +37,7 @@ go
    /*==============================================================*/
    create table ORGANIZER (
       ID numeric(8) not null,
-      FULLNAME varchar(30) not null,
+      FULLNAME varchar(40) not null,
       EMAIL varchar(40) not null,
       PASSWORD varchar(10) not null,
       constraint PK_ORGANIZER primary key (ID)
@@ -47,9 +47,9 @@ go
    /* Table: SPONSOR                                               */
    /*==============================================================*/
    create table SPONSOR (
-      ID numeric(8) not null,
+      ID numeric(8) IDENTITY(1, 1) not null,
       EVENTID numeric(8) not null,
-      NAME varchar(15) not null,
+      NAME varchar(20) not null,
       DESCRIPTION text null,
       constraint PK_SPONSOR primary key nonclustered (ID)
    )
@@ -63,7 +63,7 @@ go
    /* Table: TICKET                                                */
    /*==============================================================*/
    create table TICKET (
-      ID numeric(8) not null,
+      ID numeric(8) IDENTITY(1, 1) not null,
       EVENTID numeric(8) not null,
       TYPE varchar(10) not null,
       PRICE numeric(5) not null,

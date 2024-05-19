@@ -51,5 +51,11 @@ namespace SoftwareApp
             Form10 generateReport = new Form10();
             generateReport.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form8 addSponser = new Form8();
+            addSponser.Show();
+        }
     }
 }

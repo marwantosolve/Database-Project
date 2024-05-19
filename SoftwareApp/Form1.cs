@@ -51,28 +51,28 @@ namespace SoftwareApp
                 if (radioButton1.Checked)
                 {
                     // Admin
-                    conn.Open();
-                    string select = "SELECT * FROM [ADMIN] WHERE ID = " + textBox2.Text + " AND EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
-                    SqlDataAdapter da = new SqlDataAdapter(select, conn);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    if (dt.Rows.Count == 1)
-                    {
+                    //conn.Open();
+                    //string select = "SELECT * FROM [ADMIN] WHERE ID = " + textBox2.Text + " AND EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
+                    //SqlDataAdapter da = new SqlDataAdapter(select, conn);
+                    //DataTable dt = new DataTable();
+                    //da.Fill(dt);
+                    //if (dt.Rows.Count == 1)
+                    //{
                         SharedData.role = "Admin";
                         Form3 adminForm = new Form3();
                         adminForm.Show();
                         this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid LOGIN Information !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        textBox1.Clear();
-                        textBox3.Clear();
-                        radioButton1.Checked = false;
-                        radioButton2.Checked = false;
-                        radioButton3.Checked = false;
-                    }
-                    conn.Close();
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Invalid LOGIN Information !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //    textBox1.Clear();
+                    //    textBox3.Clear();
+                    //    radioButton1.Checked = false;
+                    //    radioButton2.Checked = false;
+                    //    radioButton3.Checked = false;
+                    //}
+                    //conn.Close();
                 }
                 else if (radioButton2.Checked)
                 {
@@ -103,33 +103,33 @@ namespace SoftwareApp
                 else if (radioButton3.Checked)
                 {
                     // Customer
-                    //conn.Open();
-                    //string select = "SELECT * FROM [CUSTOMER] WHERE ID = " + textBox2.Text + " AND EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
-                    //SqlDataAdapter da = new SqlDataAdapter(select, conn);
-                    //DataTable dt = new DataTable();
-                    //da.Fill(dt);
-                    //if (dt.Rows.Count == 1)
-                    //{
-                        SharedData.role = "Customer";
-                    string id = textBox2.Text;
-                    if (int.TryParse(id, out int custID))
+                    conn.Open();
+                    string select = "SELECT * FROM [CUSTOMER] WHERE ID = " + textBox2.Text + " AND EMAIL = '" + textBox1.Text + "' AND PASSWORD = '" + textBox3.Text + "';";
+                    SqlDataAdapter da = new SqlDataAdapter(select, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    if (dt.Rows.Count == 1)
                     {
+                        SharedData.role = "Customer";
+                        string id = textBox2.Text;
+                        if (int.TryParse(id, out int custID))
+                        {
                         SharedData.custID = custID;
-                    }
-                    Form4 CustForm = new Form4();
+                        }
+                        Form4 CustForm = new Form4();
                         CustForm.Show();
                         this.Hide();
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("Invalid LOGIN Information !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //    textBox1.Clear();
-                    //    textBox3.Clear();
-                    //    radioButton1.Checked = false;
-                    //    radioButton2.Checked = false;
-                    //    radioButton3.Checked = false;
-                    //}
-                    //conn.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid LOGIN Information !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBox1.Clear();
+                        textBox3.Clear();
+                        radioButton1.Checked = false;
+                        radioButton2.Checked = false;
+                        radioButton3.Checked = false;
+                    }
+                    conn.Close();
                 }
                 else
                 {

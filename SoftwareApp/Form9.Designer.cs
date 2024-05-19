@@ -28,116 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            textBox3 = new TextBox();
-            label2 = new Label();
-            textBox1 = new TextBox();
-            label3 = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form9));
             textBox2 = new TextBox();
-            label4 = new Label();
-            textBox4 = new TextBox();
             button3 = new Button();
-            label5 = new Label();
-            label6 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            label7 = new Label();
-            checkBox1 = new CheckBox();
-            button1 = new Button();
+            button4 = new Button();
+            label8 = new Label();
+            textBox1 = new TextBox();
+            label2 = new Label();
+            comboBox1 = new ComboBox();
+            groupBox1 = new GroupBox();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            radioButton3 = new RadioButton();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
+            label1 = new Label();
+            label3 = new Label();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Verdana", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Teal;
-            label1.Location = new Point(61, 117);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(205, 26);
-            label1.TabIndex = 0;
-            label1.Text = "THE TICKET ID:";
-            // 
-            // textBox3
-            // 
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Font = new Font("Verdana", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(276, 230);
-            textBox3.Margin = new Padding(6, 4, 6, 4);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "TYPE:";
-            textBox3.Size = new Size(288, 40);
-            textBox3.TabIndex = 31;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Verdana", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Teal;
-            label2.Location = new Point(70, 174);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(196, 26);
-            label2.TabIndex = 32;
-            label2.Text = "THE EVENT ID:";
-            // 
-            // textBox1
-            // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Verdana", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(276, 118);
-            textBox1.Margin = new Padding(6, 4, 6, 4);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "ID:";
-            textBox1.Size = new Size(288, 40);
-            textBox1.TabIndex = 33;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.ForeColor = Color.Teal;
-            label3.Location = new Point(127, 229);
-            label3.Name = "label3";
-            label3.Size = new Size(139, 26);
-            label3.TabIndex = 34;
-            label3.Text = "THE TYPE:";
             // 
             // textBox2
             // 
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Verdana", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(276, 175);
-            textBox2.Margin = new Padding(4);
+            textBox2.Location = new Point(86, 198);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "ID:";
-            textBox2.Size = new Size(288, 38);
-            textBox2.TabIndex = 35;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Verdana", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Teal;
-            label4.Location = new Point(114, 285);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(153, 26);
-            label4.TabIndex = 36;
-            label4.Text = "THE PRICE:";
-            // 
-            // textBox4
-            // 
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Font = new Font("Verdana", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(277, 286);
-            textBox4.Margin = new Padding(6, 4, 6, 4);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "PRICE:";
-            textBox4.Size = new Size(287, 39);
-            textBox4.TabIndex = 37;
+            textBox2.PlaceholderText = "YYYY-MM-DD";
+            textBox2.Size = new Size(293, 30);
+            textBox2.TabIndex = 74;
             // 
             // button3
             // 
@@ -148,122 +71,232 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
             button3.ForeColor = Color.FromArgb(0, 64, 64);
-            button3.Location = new Point(559, -1);
+            button3.Location = new Point(400, -6);
             button3.Margin = new Padding(0);
             button3.Name = "button3";
-            button3.Size = new Size(55, 51);
-            button3.TabIndex = 38;
+            button3.Size = new Size(33, 39);
+            button3.TabIndex = 72;
             button3.Text = "X";
             button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            button3.Click += button3_Click_1;
             // 
-            // label5
+            // button4
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Verdana", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Teal;
-            label5.Location = new Point(124, 338);
-            label5.Name = "label5";
-            label5.Size = new Size(142, 26);
-            label5.TabIndex = 39;
-            label5.Text = "THE DATE:";
+            button4.BackColor = Color.FromArgb(0, 64, 64);
+            button4.Cursor = Cursors.Hand;
+            button4.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 64);
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.Beige;
+            button4.Location = new Point(118, 459);
+            button4.Name = "button4";
+            button4.Size = new Size(174, 45);
+            button4.TabIndex = 65;
+            button4.Text = "Set";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
-            // label6
+            // label8
             // 
-            label6.AutoSize = true;
-            label6.ForeColor = Color.Teal;
-            label6.Location = new Point(65, 386);
-            label6.Name = "label6";
-            label6.Size = new Size(201, 26);
-            label6.TabIndex = 40;
-            label6.Text = "AVAILABILITY:";
+            label8.AutoSize = true;
+            label8.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.Teal;
+            label8.Location = new Point(62, 19);
+            label8.Name = "label8";
+            label8.Size = new Size(299, 36);
+            label8.TabIndex = 64;
+            label8.Text = "Set A New Ticket";
             // 
-            // dateTimePicker1
+            // textBox1
             // 
-            dateTimePicker1.Location = new Point(277, 338);
-            dateTimePicker1.MinDate = new DateTime(2024, 5, 18, 0, 0, 0, 0);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(287, 34);
-            dateTimePicker1.TabIndex = 41;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Verdana", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(86, 149);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Set A Price:";
+            textBox1.Size = new Size(293, 30);
+            textBox1.TabIndex = 76;
             // 
-            // label7
+            // label2
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Teal;
-            label7.Location = new Point(197, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(256, 44);
-            label7.TabIndex = 42;
-            label7.Text = "SET TICKET";
+            label2.AutoSize = true;
+            label2.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(0, 64, 64);
+            label2.Location = new Point(18, 98);
+            label2.Name = "label2";
+            label2.Size = new Size(148, 25);
+            label2.TabIndex = 78;
+            label2.Text = "Select Event:";
             // 
-            // checkBox1
+            // comboBox1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(276, 391);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(22, 21);
-            checkBox1.TabIndex = 43;
-            checkBox1.UseVisualStyleBackColor = true;
+            comboBox1.BackColor = Color.White;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FlatStyle = FlatStyle.Flat;
+            comboBox1.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox1.ForeColor = SystemColors.WindowText;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(165, 97);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(214, 26);
+            comboBox1.TabIndex = 77;
+            comboBox1.Tag = "";
             // 
-            // button1
+            // groupBox1
             // 
-            button1.BackColor = Color.FromArgb(0, 64, 64);
-            button1.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Beige;
-            button1.Location = new Point(197, 441);
-            button1.Name = "button1";
-            button1.Size = new Size(256, 76);
-            button1.TabIndex = 44;
-            button1.Text = "SET TICKET";
-            button1.UseVisualStyleBackColor = false;
+            groupBox1.Controls.Add(pictureBox2);
+            groupBox1.Controls.Add(pictureBox1);
+            groupBox1.Controls.Add(pictureBox4);
+            groupBox1.Controls.Add(radioButton3);
+            groupBox1.Controls.Add(radioButton2);
+            groupBox1.Controls.Add(radioButton1);
+            groupBox1.Cursor = Cursors.IBeam;
+            groupBox1.FlatStyle = FlatStyle.Flat;
+            groupBox1.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBox1.ForeColor = Color.FromArgb(0, 64, 64);
+            groupBox1.Location = new Point(12, 244);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(405, 199);
+            groupBox1.TabIndex = 79;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Select Ticket Type:";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(277, 46);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(90, 116);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 55;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(153, 46);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(88, 116);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 54;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(35, 46);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(82, 116);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 53;
+            pictureBox4.TabStop = false;
+            // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.Cursor = Cursors.Hand;
+            radioButton3.Location = new Point(315, 168);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(17, 16);
+            radioButton3.TabIndex = 2;
+            radioButton3.TabStop = true;
+            radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Cursor = Cursors.Hand;
+            radioButton2.Location = new Point(188, 168);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(17, 16);
+            radioButton2.TabIndex = 1;
+            radioButton2.TabStop = true;
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Cursor = Cursors.Hand;
+            radioButton1.Location = new Point(66, 168);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(17, 16);
+            radioButton1.TabIndex = 0;
+            radioButton1.TabStop = true;
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(0, 64, 64);
+            label1.Location = new Point(18, 149);
+            label1.Name = "label1";
+            label1.Size = new Size(70, 25);
+            label1.TabIndex = 80;
+            label1.Text = "Price:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(0, 64, 64);
+            label3.Location = new Point(18, 198);
+            label3.Name = "label3";
+            label3.Size = new Size(68, 25);
+            label3.TabIndex = 81;
+            label3.Text = "Date:";
             // 
             // Form9
             // 
-            AutoScaleDimensions = new SizeF(15F, 26F);
+            AutoScaleDimensions = new SizeF(13F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
-            ClientSize = new Size(613, 556);
-            Controls.Add(button1);
-            Controls.Add(checkBox1);
-            Controls.Add(label7);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(button3);
-            Controls.Add(textBox4);
-            Controls.Add(label4);
-            Controls.Add(textBox2);
+            ClientSize = new Size(429, 523);
             Controls.Add(label3);
-            Controls.Add(textBox1);
-            Controls.Add(label2);
-            Controls.Add(textBox3);
             Controls.Add(label1);
+            Controls.Add(groupBox1);
+            Controls.Add(label2);
+            Controls.Add(comboBox1);
+            Controls.Add(textBox1);
+            Controls.Add(textBox2);
+            Controls.Add(button3);
+            Controls.Add(button4);
+            Controls.Add(label8);
             Font = new Font("Verdana", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
             Name = "Form9";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "SET TICKET";
+            Load += Form9_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private TextBox textBox3;
-        private Label label2;
-        private TextBox textBox1;
-        private Label label3;
         private TextBox textBox2;
-        private Label label4;
-        private TextBox textBox4;
         private Button button3;
-        private Label label5;
-        private Label label6;
-        private DateTimePicker dateTimePicker1;
-        private Label label7;
-        private CheckBox checkBox1;
-        private Button button1;
+        private Button button4;
+        private Label label8;
+        private TextBox textBox1;
+        private Label label2;
+        private ComboBox comboBox1;
+        private GroupBox groupBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox4;
+        private RadioButton radioButton3;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
+        private Label label1;
+        private Label label3;
     }
 }

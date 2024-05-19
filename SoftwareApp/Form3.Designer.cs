@@ -39,6 +39,7 @@
             button5 = new Button();
             button4 = new Button();
             pictureBox1 = new PictureBox();
+            button7 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -138,7 +139,7 @@
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button6.ForeColor = Color.Beige;
-            button6.Location = new Point(431, 350);
+            button6.Location = new Point(440, 390);
             button6.Name = "button6";
             button6.Size = new Size(343, 42);
             button6.TabIndex = 24;
@@ -155,7 +156,7 @@
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.Beige;
-            button5.Location = new Point(431, 270);
+            button5.Location = new Point(440, 328);
             button5.Name = "button5";
             button5.Size = new Size(343, 42);
             button5.TabIndex = 23;
@@ -172,7 +173,7 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.Beige;
-            button4.Location = new Point(431, 194);
+            button4.Location = new Point(440, 194);
             button4.Name = "button4";
             button4.Size = new Size(343, 42);
             button4.TabIndex = 22;
@@ -190,12 +191,30 @@
             pictureBox1.TabIndex = 25;
             pictureBox1.TabStop = false;
             // 
+            // button7
+            // 
+            button7.BackColor = Color.Teal;
+            button7.Cursor = Cursors.Hand;
+            button7.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 64);
+            button7.FlatAppearance.BorderSize = 0;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button7.ForeColor = Color.Beige;
+            button7.Location = new Point(440, 260);
+            button7.Name = "button7";
+            button7.Size = new Size(343, 42);
+            button7.TabIndex = 26;
+            button7.Text = "Add A Sponsor";
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
             ClientSize = new Size(820, 483);
+            Controls.Add(button7);
             Controls.Add(pictureBox1);
             Controls.Add(button6);
             Controls.Add(button5);
@@ -225,5 +244,6 @@
         private Button button5;
         private Button button4;
         private PictureBox pictureBox1;
+        private Button button7;
     }
 }
