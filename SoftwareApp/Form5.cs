@@ -5,10 +5,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 
 
@@ -23,6 +25,32 @@ namespace SoftwareApp
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (!(textBox5.Text == ""))
+            {
+                label4.Text = "";
+                label2.Text = "";
+                if (!(textBox5.Text.Contains("@") && textBox5.Text.EndsWith(".com")))
+                {
+                    label4.Text = "Email must contain a '@' and end with \".com\"!";
+                    return;
+                } else
+                {
+                    label4.Text = "";
+                }
+            }
+            if (!(textBox4.Text == ""))
+            {
+                label4.Text = "";
+                label2.Text = "";
+                if (textBox4.Text.Length < 4)
+                {
+                    label2.Text = "Password must be at least 4 characters!";
+                    return;
+                } else
+                {
+                    label2.Text = "";
+                }
+            }
             int currentID = SharedData.custID;
             string role = SharedData.role;
             string connString = "Server=localhost; Database=EventDB; Integrated Security=True;";
@@ -56,15 +84,15 @@ namespace SoftwareApp
                             SqlCommand command = new SqlCommand(update, conn);
                             command.ExecuteNonQuery();
                         }
-                        if (!(textBox6.Text == ""))
+                        if (!(textBox5.Text == ""))
                         {
-                            string update = "UPDATE [ADMIN] SET EMAIL = '" + textBox6.Text + "' WHERE ID = " + currentID + " ;";
+                            string update = "UPDATE [ADMIN] SET EMAIL = '" + textBox5.Text + "' WHERE ID = " + currentID + " ;";
                             SqlCommand command = new SqlCommand(update, conn);
                             command.ExecuteNonQuery();
                         }
-                        if (!(textBox5.Text == ""))
+                        if (!(textBox4.Text == ""))
                         {
-                            string update = "UPDATE [ADMIN] SET PASSWORD = '" + textBox5.Text + "' WHERE ID = " + currentID + " ;";
+                            string update = "UPDATE [ADMIN] SET PASSWORD = '" + textBox4.Text + "' WHERE ID = " + currentID + " ;";
                             SqlCommand command = new SqlCommand(update, conn);
                             command.ExecuteNonQuery();
                         }
@@ -110,15 +138,15 @@ namespace SoftwareApp
                             SqlCommand command = new SqlCommand(update, conn);
                             command.ExecuteNonQuery();
                         }
-                        if (!(textBox6.Text == ""))
+                        if (!(textBox5.Text == ""))
                         {
-                            string update = "UPDATE [ORGANIZER] SET EMAIL = '" + textBox6.Text + "' WHERE ID = " + currentID + " ;";
+                            string update = "UPDATE [ORGANIZER] SET EMAIL = '" + textBox5.Text + "' WHERE ID = " + currentID + " ;";
                             SqlCommand command = new SqlCommand(update, conn);
                             command.ExecuteNonQuery();
                         }
-                        if (!(textBox5.Text == ""))
+                        if (!(textBox4.Text == ""))
                         {
-                            string update = "UPDATE [ORGANIZER] SET PASSWORD = '" + textBox5.Text + "' WHERE ID = " + currentID + " ;";
+                            string update = "UPDATE [ORGANIZER] SET PASSWORD = '" + textBox4.Text + "' WHERE ID = " + currentID + " ;";
                             SqlCommand command = new SqlCommand(update, conn);
                             command.ExecuteNonQuery();
                         }
@@ -164,15 +192,15 @@ namespace SoftwareApp
                             SqlCommand command = new SqlCommand(update, conn);
                             command.ExecuteNonQuery();
                         }
-                        if (!(textBox6.Text == ""))
+                        if (!(textBox5.Text == ""))
                         {
-                            string update = "UPDATE [CUSTOMER] SET EMAIL = '" + textBox6.Text + "' WHERE ID = " + currentID + " ;";
+                            string update = "UPDATE [CUSTOMER] SET EMAIL = '" + textBox5.Text + "' WHERE ID = " + currentID + " ;";
                             SqlCommand command = new SqlCommand(update, conn);
                             command.ExecuteNonQuery();
                         }
-                        if (!(textBox5.Text == ""))
+                        if (!(textBox4.Text == ""))
                         {
-                            string update = "UPDATE [CUSTOMER] SET PASSWORD = '" + textBox5.Text + "' WHERE ID = " + currentID + " ;";
+                            string update = "UPDATE [CUSTOMER] SET PASSWORD = '" + textBox4.Text + "' WHERE ID = " + currentID + " ;";
                             SqlCommand command = new SqlCommand(update, conn);
                             command.ExecuteNonQuery();
                         }

@@ -45,6 +45,8 @@
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
             button3 = new Button();
+            label1 = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -69,7 +71,7 @@
             checkBox1.Cursor = Cursors.Hand;
             checkBox1.Font = new Font("Verdana", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
             checkBox1.ForeColor = Color.FromArgb(0, 64, 64);
-            checkBox1.Location = new Point(223, 286);
+            checkBox1.Location = new Point(222, 305);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(132, 20);
             checkBox1.TabIndex = 18;
@@ -171,7 +173,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.Beige;
-            button2.Location = new Point(96, 387);
+            button2.Location = new Point(96, 399);
             button2.Name = "button2";
             button2.Size = new Size(153, 42);
             button2.TabIndex = 23;
@@ -188,7 +190,7 @@
             groupBox1.FlatStyle = FlatStyle.Flat;
             groupBox1.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.FromArgb(0, 64, 64);
-            groupBox1.Location = new Point(23, 316);
+            groupBox1.Location = new Point(23, 327);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(326, 54);
             groupBox1.TabIndex = 24;
@@ -249,12 +251,34 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click_1;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Verdana", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Red;
+            label1.Location = new Point(22, 232);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 16);
+            label1.TabIndex = 64;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Verdana", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Red;
+            label2.Location = new Point(23, 284);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 16);
+            label2.TabIndex = 65;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
-            ClientSize = new Size(369, 453);
+            ClientSize = new Size(369, 461);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(button3);
             Controls.Add(groupBox1);
             Controls.Add(button2);
@@ -300,5 +324,7 @@
         private RadioButton radioButton2;
         private RadioButton radioButton1;
         private Button button3;
+        private Label label1;
+        private Label label2;
     }
 }

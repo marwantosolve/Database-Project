@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             label5 = new Label();
             panel1 = new Panel();
+            button8 = new Button();
             pictureBox2 = new PictureBox();
             button2 = new Button();
             button1 = new Button();
@@ -40,7 +41,6 @@
             pictureBox1 = new PictureBox();
             button7 = new Button();
             button3 = new Button();
-            button8 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -69,6 +69,23 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(387, 493);
             panel1.TabIndex = 17;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.FromArgb(0, 64, 64);
+            button8.Cursor = Cursors.Hand;
+            button8.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 64);
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button8.ForeColor = Color.Beige;
+            button8.Location = new Point(98, 393);
+            button8.Name = "button8";
+            button8.Size = new Size(191, 42);
+            button8.TabIndex = 23;
+            button8.Text = "Log Out";
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // pictureBox2
             // 
@@ -106,9 +123,9 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Beige;
-            button1.Location = new Point(102, 255);
+            button1.Location = new Point(98, 263);
             button1.Name = "button1";
-            button1.Size = new Size(187, 42);
+            button1.Size = new Size(191, 42);
             button1.TabIndex = 16;
             button1.Text = "Update Account";
             button1.UseVisualStyleBackColor = false;
@@ -209,23 +226,6 @@
             button3.Text = "X";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click_1;
-            // 
-            // button8
-            // 
-            button8.BackColor = Color.FromArgb(0, 64, 64);
-            button8.Cursor = Cursors.Hand;
-            button8.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 64);
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button8.ForeColor = Color.Beige;
-            button8.Location = new Point(98, 393);
-            button8.Name = "button8";
-            button8.Size = new Size(191, 42);
-            button8.TabIndex = 23;
-            button8.Text = "Log Out";
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
             // 
             // Form3
             // 

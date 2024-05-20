@@ -25,18 +25,54 @@ namespace SoftwareApp
             textBox3.PasswordChar = checkBox1.Checked ? '\0' : '*';
         }
 
+        private bool ValidateForm()
+        {
+            label1.Text = "";
+            label2.Text = "";
+            // Check if any text box is empty or no radio button is selected
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" ||
+                (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked))
+            {
+                MessageBox.Show("You must complete your information first!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Check if the password is at least 4 characters long
+            if (textBox3.Text.Length < 4)
+            {
+                label2.Text = "Password must be at least 4 characters!";
+                return false;
+            } else
+            {
+                label2.Text = "";
+            }
+
+            // Check if the email contains '@' and ends with '.com'
+            if (!(textBox1.Text.Contains("@") && textBox1.Text.EndsWith(".com")))
+            {
+                label1.Text = "Email must contain a '@' and end with \".com\"!";
+                return false;
+            }
+            else
+            {
+                label1.Text = "";
+            }
+
+            // If all checks pass, return true
+            return true;
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             string connString = "Server= localhost; Database= EventDB; Integrated Security=True;";
             SqlConnection conn = new SqlConnection(connString);
             try
             {
-
-                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked))
+                if (!ValidateForm())
                 {
-                    MessageBox.Show("You must complete your information first !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
                 if (radioButton1.Checked)
                 {
                     // Admin
@@ -53,6 +89,9 @@ namespace SoftwareApp
                             command.ExecuteNonQuery();
                         }
                         MessageBox.Show("You've Registered your Account Successfully ✓\nGo LOGIN NOW !", "Registered Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        label1.Text = "";
+                        label2.Text = "";
+                        this.Close();
                         conn.Close();
                     }
                     catch (Exception ex)
@@ -76,6 +115,9 @@ namespace SoftwareApp
                             command.ExecuteNonQuery();
                         }
                         MessageBox.Show("You've Registered your Account Successfully ✓\nGo LOGIN NOW !", "Registered Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        label1.Text = "";
+                        label2.Text = "";
+                        this.Close();
                         conn.Close();
                     }
                     catch (Exception ex)
@@ -99,6 +141,9 @@ namespace SoftwareApp
                             command.ExecuteNonQuery();
                         }
                         MessageBox.Show("You've Registered your Account Successfully ✓\nGo LOGIN NOW !", "Registered Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        label1.Text = "";
+                        label2.Text = "";
+                        this.Close();
                         conn.Close();
                     }
                     catch (Exception ex)
