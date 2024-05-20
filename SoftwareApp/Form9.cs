@@ -45,8 +45,8 @@ namespace SoftwareApp
                         string eventName = reader.GetString("NAME");
                         comboBox1.Items.Add(eventName);
                     }
-                    conn.Close();
                 }
+                conn.Close();
             }
             catch (Exception ex)
             {

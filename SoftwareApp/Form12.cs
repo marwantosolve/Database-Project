@@ -39,8 +39,8 @@ namespace SoftwareApp
                         string eventName = reader.GetString("NAME");
                         comboBox1.Items.Add(eventName);
                     }
-                    conn.Close();
                 }
+                conn.Close();
             }
             catch (Exception ex)
             {
@@ -56,13 +56,11 @@ namespace SoftwareApp
             try
             {
                 conn.Open();
-
                 string sqlQuerySelect =
                 "SELECT SPONSOR.ID , SPONSOR.NAME , SPONSOR.DESCRIPTION " +
                 "FROM SPONSOR " +
                 "INNER JOIN EVENT ON SPONSOR.EVENTID = EVENT.ID " +
                 "WHERE EVENT.NAME = @eventName;";
-
                 SqlCommand command = new SqlCommand(sqlQuerySelect, conn);
                 command.Parameters.AddWithValue("@eventName", eventName);
                 using (SqlDataReader reader = command.ExecuteReader())

@@ -146,10 +146,10 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
             button3.ForeColor = Color.FromArgb(0, 64, 64);
-            button3.Location = new Point(415, -6);
+            button3.Location = new Point(414, -6);
             button3.Margin = new Padding(0);
             button3.Name = "button3";
-            button3.Size = new Size(33, 39);
+            button3.Size = new Size(34, 39);
             button3.TabIndex = 61;
             button3.Text = "X";
             button3.UseVisualStyleBackColor = false;

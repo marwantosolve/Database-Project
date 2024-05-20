@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SoftwareApp
 {
@@ -37,6 +38,11 @@ namespace SoftwareApp
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text == "" || comboBox1.SelectedItem == "")
+            {
+                MessageBox.Show("You must complete Sponsor information !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string name = textBox6.Text;
             string desc = textBox1.Text;
             string? eventName = comboBox1.SelectedItem != null ? comboBox1.SelectedItem.ToString() : "";

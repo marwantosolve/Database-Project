@@ -18,11 +18,6 @@ namespace SoftwareApp
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             textBox4.Enabled = checkBox1.Checked;
@@ -35,7 +30,7 @@ namespace SoftwareApp
 
         private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
         {
-            comboBox1.Enabled = checkBox3.Checked;   
+            comboBox1.Enabled = checkBox3.Checked;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -206,6 +201,10 @@ namespace SoftwareApp
                 dataGridView1.DataSource = "";
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }     

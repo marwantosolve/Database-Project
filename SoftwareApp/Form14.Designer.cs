@@ -102,9 +102,9 @@
             groupBox1.FlatStyle = FlatStyle.Flat;
             groupBox1.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.FromArgb(0, 64, 64);
-            groupBox1.Location = new Point(415, 59);
+            groupBox1.Location = new Point(371, 59);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(364, 155);
+            groupBox1.Size = new Size(442, 155);
             groupBox1.TabIndex = 52;
             groupBox1.TabStop = false;
             groupBox1.Text = "Select Ticket Type:";
@@ -112,7 +112,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(279, 25);
+            pictureBox2.Location = new Point(357, 25);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(79, 104);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -122,7 +122,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(141, 25);
+            pictureBox1.Location = new Point(182, 25);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(77, 104);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -143,7 +143,7 @@
             // 
             radioButton3.AutoSize = true;
             radioButton3.Cursor = Cursors.Hand;
-            radioButton3.Location = new Point(310, 135);
+            radioButton3.Location = new Point(388, 135);
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(17, 16);
             radioButton3.TabIndex = 2;
@@ -154,7 +154,7 @@
             // 
             radioButton2.AutoSize = true;
             radioButton2.Cursor = Cursors.Hand;
-            radioButton2.Location = new Point(171, 135);
+            radioButton2.Location = new Point(212, 135);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(17, 16);
             radioButton2.TabIndex = 1;
@@ -179,9 +179,9 @@
             comboBox1.FlatStyle = FlatStyle.Flat;
             comboBox1.ForeColor = SystemColors.WindowText;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(421, 31);
+            comboBox1.Location = new Point(377, 25);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(212, 28);
+            comboBox1.Size = new Size(253, 28);
             comboBox1.TabIndex = 53;
             comboBox1.Tag = "";
             // 
@@ -190,7 +190,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(0, 64, 64);
-            label1.Location = new Point(421, 11);
+            label1.Location = new Point(377, 5);
             label1.Name = "label1";
             label1.Size = new Size(107, 18);
             label1.TabIndex = 54;
@@ -217,7 +217,7 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
             button3.ForeColor = Color.FromArgb(0, 64, 64);
-            button3.Location = new Point(794, -6);
+            button3.Location = new Point(794, -4);
             button3.Margin = new Padding(0);
             button3.Name = "button3";
             button3.Size = new Size(29, 37);

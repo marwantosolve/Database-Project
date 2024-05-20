@@ -17,15 +17,11 @@ namespace SoftwareApp
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Form6 deleteAcc = new Form6();
             deleteAcc.Show();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,5 +53,16 @@ namespace SoftwareApp
             purchaseTicket.Show();
         }
 
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 index = new Form1();
+            index.Show();
+        }
     }
 }

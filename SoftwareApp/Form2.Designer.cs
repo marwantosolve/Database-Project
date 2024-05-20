@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            button3 = new Button();
             label3 = new Label();
             checkBox1 = new CheckBox();
             textBox3 = new TextBox();
@@ -45,30 +44,13 @@
             radioButton3 = new RadioButton();
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.Beige;
-            button3.BackgroundImageLayout = ImageLayout.None;
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(0, 64, 64);
-            button3.Location = new Point(334, -6);
-            button3.Margin = new Padding(0);
-            button3.Name = "button3";
-            button3.Size = new Size(44, 41);
-            button3.TabIndex = 12;
-            button3.Text = "X";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
             // 
             // label3
             // 
@@ -77,9 +59,9 @@
             label3.ForeColor = Color.Teal;
             label3.Location = new Point(59, 45);
             label3.Name = "label3";
-            label3.Size = new Size(256, 25);
+            label3.Size = new Size(259, 25);
             label3.TabIndex = 13;
-            label3.Text = "Create a new Account";
+            label3.Text = "Create a New Account";
             // 
             // checkBox1
             // 
@@ -249,12 +231,31 @@
             radioButton1.Text = "Admin";
             radioButton1.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.Beige;
+            button3.BackgroundImageLayout = ImageLayout.None;
+            button3.Cursor = Cursors.Hand;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
+            button3.ForeColor = Color.FromArgb(0, 64, 64);
+            button3.Location = new Point(337, -5);
+            button3.Margin = new Padding(0);
+            button3.Name = "button3";
+            button3.Size = new Size(34, 39);
+            button3.TabIndex = 63;
+            button3.Text = "X";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
             ClientSize = new Size(369, 453);
+            Controls.Add(button3);
             Controls.Add(groupBox1);
             Controls.Add(button2);
             Controls.Add(pictureBox4);
@@ -267,13 +268,11 @@
             Controls.Add(pictureBox2);
             Controls.Add(textBox1);
             Controls.Add(label3);
-            Controls.Add(button3);
             ForeColor = Color.Black;
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form2";
-            Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -285,8 +284,6 @@
         }
 
         #endregion
-
-        private Button button3;
         private Label label3;
         private CheckBox checkBox1;
         private TextBox textBox3;
@@ -302,5 +299,6 @@
         private RadioButton radioButton3;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
+        private Button button3;
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button3 = new Button();
             checkBox1 = new CheckBox();
             checkBox2 = new CheckBox();
             checkBox3 = new CheckBox();
@@ -38,26 +37,9 @@
             textBox4 = new TextBox();
             textBox1 = new TextBox();
             dataGridView1 = new DataGridView();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.Beige;
-            button3.BackgroundImageLayout = ImageLayout.None;
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(0, 64, 64);
-            button3.Location = new Point(368, -7);
-            button3.Margin = new Padding(0);
-            button3.Name = "button3";
-            button3.Size = new Size(39, 43);
-            button3.TabIndex = 36;
-            button3.Text = "X";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
             // 
             // checkBox1
             // 
@@ -180,12 +162,31 @@
             dataGridView1.Size = new Size(410, 213);
             dataGridView1.TabIndex = 49;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.Beige;
+            button3.BackgroundImageLayout = ImageLayout.None;
+            button3.Cursor = Cursors.Hand;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
+            button3.ForeColor = Color.FromArgb(0, 64, 64);
+            button3.Location = new Point(370, -4);
+            button3.Margin = new Padding(0);
+            button3.Name = "button3";
+            button3.Size = new Size(34, 39);
+            button3.TabIndex = 62;
+            button3.Text = "X";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
+            // 
             // Form11
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
             ClientSize = new Size(400, 584);
+            Controls.Add(button3);
             Controls.Add(dataGridView1);
             Controls.Add(textBox1);
             Controls.Add(textBox4);
@@ -195,7 +196,6 @@
             Controls.Add(checkBox3);
             Controls.Add(checkBox2);
             Controls.Add(checkBox1);
-            Controls.Add(button3);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form11";
             StartPosition = FormStartPosition.CenterScreen;
@@ -206,7 +206,6 @@
         }
 
         #endregion
-        private Button button3;
         private CheckBox checkBox1;
         private CheckBox checkBox2;
         private CheckBox checkBox3;
@@ -216,5 +215,6 @@
         private TextBox textBox4;
         private TextBox textBox1;
         private DataGridView dataGridView1;
+        private Button button3;
     }
 }

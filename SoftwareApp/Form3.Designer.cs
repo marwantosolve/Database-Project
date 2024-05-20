@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
-            button3 = new Button();
             label5 = new Label();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
@@ -40,28 +39,12 @@
             button4 = new Button();
             pictureBox1 = new PictureBox();
             button7 = new Button();
+            button3 = new Button();
+            button8 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.Beige;
-            button3.BackgroundImageLayout = ImageLayout.None;
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(0, 64, 64);
-            button3.Location = new Point(782, -3);
-            button3.Margin = new Padding(0);
-            button3.Name = "button3";
-            button3.Size = new Size(44, 41);
-            button3.TabIndex = 12;
-            button3.Text = "X";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
             // 
             // label5
             // 
@@ -77,6 +60,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Teal;
+            panel1.Controls.Add(button8);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(button2);
@@ -89,7 +73,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(128, 133);
+            pictureBox2.Location = new Point(122, 94);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(141, 124);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -105,7 +89,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.Beige;
-            button2.Location = new Point(100, 397);
+            button2.Location = new Point(98, 328);
             button2.Name = "button2";
             button2.Size = new Size(191, 42);
             button2.TabIndex = 17;
@@ -122,7 +106,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Beige;
-            button1.Location = new Point(104, 324);
+            button1.Location = new Point(102, 255);
             button1.Name = "button1";
             button1.Size = new Size(187, 42);
             button1.TabIndex = 16;
@@ -208,19 +192,54 @@
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.Beige;
+            button3.BackgroundImageLayout = ImageLayout.None;
+            button3.Cursor = Cursors.Hand;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
+            button3.ForeColor = Color.FromArgb(0, 64, 64);
+            button3.Location = new Point(790, -5);
+            button3.Margin = new Padding(0);
+            button3.Name = "button3";
+            button3.Size = new Size(34, 39);
+            button3.TabIndex = 63;
+            button3.Text = "X";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.FromArgb(0, 64, 64);
+            button8.Cursor = Cursors.Hand;
+            button8.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 64);
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button8.ForeColor = Color.Beige;
+            button8.Location = new Point(98, 393);
+            button8.Name = "button8";
+            button8.Size = new Size(191, 42);
+            button8.TabIndex = 23;
+            button8.Text = "Log Out";
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
             ClientSize = new Size(820, 483);
+            Controls.Add(button3);
             Controls.Add(button7);
             Controls.Add(pictureBox1);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(panel1);
-            Controls.Add(button3);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form3";
             StartPosition = FormStartPosition.CenterScreen;
@@ -233,8 +252,6 @@
         }
 
         #endregion
-
-        private Button button3;
         private Label label5;
         private Panel panel1;
         private PictureBox pictureBox2;
@@ -245,5 +262,7 @@
         private Button button4;
         private PictureBox pictureBox1;
         private Button button7;
+        private Button button3;
+        private Button button8;
     }
 }

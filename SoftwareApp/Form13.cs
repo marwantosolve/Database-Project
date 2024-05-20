@@ -23,10 +23,10 @@ namespace SoftwareApp
         {
             string connString = "Server= localhost; Database= EventDB; Integrated Security=True;";
             SqlConnection conn = new SqlConnection(connString);
-            try
+            DialogResult result = MessageBox.Show("Are you sure you want to Return your Ticket?", "Confirm Return Process", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                DialogResult result = MessageBox.Show("Are you sure you want to Return your Ticket?", "Confirm Return Process", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
+                try
                 {
                     conn.Open();
                     string sqlQueryInsert = "DELETE FROM [TICKET] WHERE ID = @id AND CUSTID = @cid ;";
@@ -35,23 +35,22 @@ namespace SoftwareApp
                     command.Parameters.AddWithValue("@cid", textBox4.Text);
                     command.ExecuteNonQuery();
                     MessageBox.Show("You've Returned your Ticket Successfully !", "Returned Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
                     conn.Close();
                 }
-                else if (result == DialogResult.No)
+                catch (Exception ex)
                 {
-                    return;
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
-                {
-                    return;
-                }
+                this.Hide();
             }
-            catch (Exception ex)
+            else if (result == DialogResult.No)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                return;
             }
-
+            else
+            {
+                return;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

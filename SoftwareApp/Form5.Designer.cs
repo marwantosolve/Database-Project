@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
-            pictureBox4 = new PictureBox();
-            textBox4 = new TextBox();
             label3 = new Label();
             checkBox1 = new CheckBox();
             textBox3 = new TextBox();
@@ -45,36 +43,14 @@
             pictureBox6 = new PictureBox();
             textBox6 = new TextBox();
             label1 = new Label();
-            button3 = new Button();
             button2 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(24, 73);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(30, 30);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 24;
-            pictureBox4.TabStop = false;
-            // 
-            // textBox4
-            // 
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Font = new Font("Verdana", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(60, 73);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Confirm your ID:";
-            textBox4.Size = new Size(290, 30);
-            textBox4.TabIndex = 23;
             // 
             // label3
             // 
@@ -93,7 +69,7 @@
             checkBox1.Cursor = Cursors.Hand;
             checkBox1.Font = new Font("Verdana", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
             checkBox1.ForeColor = Color.FromArgb(0, 64, 64);
-            checkBox1.Location = new Point(225, 145);
+            checkBox1.Location = new Point(226, 106);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(132, 20);
             checkBox1.TabIndex = 28;
@@ -105,7 +81,7 @@
             // 
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Verdana", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(60, 109);
+            textBox3.Location = new Point(61, 70);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.PasswordChar = '*';
@@ -116,7 +92,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(25, 109);
+            pictureBox2.Location = new Point(26, 70);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(30, 30);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -126,7 +102,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(25, 250);
+            pictureBox1.Location = new Point(25, 196);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(30, 30);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -136,7 +112,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(26, 299);
+            pictureBox3.Location = new Point(26, 245);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(30, 30);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -147,7 +123,7 @@
             // 
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Verdana", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(61, 250);
+            textBox1.Location = new Point(61, 196);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "New ID:";
@@ -158,7 +134,7 @@
             // 
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Verdana", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(61, 299);
+            textBox2.Location = new Point(61, 245);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.PlaceholderText = "New Full Name:";
@@ -171,7 +147,7 @@
             checkBox2.Cursor = Cursors.Hand;
             checkBox2.Font = new Font("Verdana", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
             checkBox2.ForeColor = Color.FromArgb(0, 64, 64);
-            checkBox2.Location = new Point(227, 439);
+            checkBox2.Location = new Point(227, 385);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(132, 20);
             checkBox2.TabIndex = 33;
@@ -183,7 +159,7 @@
             // 
             textBox5.BorderStyle = BorderStyle.None;
             textBox5.Font = new Font("Verdana", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(61, 403);
+            textBox5.Location = new Point(61, 349);
             textBox5.Multiline = true;
             textBox5.Name = "textBox5";
             textBox5.PasswordChar = '*';
@@ -194,7 +170,7 @@
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(26, 351);
+            pictureBox5.Location = new Point(26, 297);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(30, 30);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -204,7 +180,7 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(26, 403);
+            pictureBox6.Location = new Point(26, 349);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(30, 30);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -215,7 +191,7 @@
             // 
             textBox6.BorderStyle = BorderStyle.None;
             textBox6.Font = new Font("Verdana", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox6.Location = new Point(61, 351);
+            textBox6.Location = new Point(61, 297);
             textBox6.Multiline = true;
             textBox6.Name = "textBox6";
             textBox6.PlaceholderText = "New Email:";
@@ -227,29 +203,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Teal;
-            label1.Location = new Point(25, 213);
+            label1.Location = new Point(25, 159);
             label1.Name = "label1";
             label1.Size = new Size(244, 25);
             label1.TabIndex = 39;
             label1.Text = "Enter The New Data:";
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.Beige;
-            button3.BackgroundImageLayout = ImageLayout.None;
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(0, 64, 64);
-            button3.Location = new Point(348, -7);
-            button3.Margin = new Padding(0);
-            button3.Name = "button3";
-            button3.Size = new Size(44, 41);
-            button3.TabIndex = 41;
-            button3.Text = "X";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -260,7 +218,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.Beige;
-            button2.Location = new Point(116, 465);
+            button2.Location = new Point(116, 420);
             button2.Name = "button2";
             button2.Size = new Size(153, 42);
             button2.TabIndex = 40;
@@ -268,12 +226,30 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.Beige;
+            button3.BackgroundImageLayout = ImageLayout.None;
+            button3.Cursor = Cursors.Hand;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
+            button3.ForeColor = Color.FromArgb(0, 64, 64);
+            button3.Location = new Point(351, -4);
+            button3.Margin = new Padding(0);
+            button3.Name = "button3";
+            button3.Size = new Size(34, 39);
+            button3.TabIndex = 62;
+            button3.Text = "X";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
+            // 
             // Form5
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
-            ClientSize = new Size(382, 517);
+            ClientSize = new Size(382, 486);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(label1);
@@ -290,13 +266,10 @@
             Controls.Add(textBox3);
             Controls.Add(pictureBox2);
             Controls.Add(label3);
-            Controls.Add(pictureBox4);
-            Controls.Add(textBox4);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form5";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form5";
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -307,9 +280,6 @@
         }
 
         #endregion
-
-        private PictureBox pictureBox4;
-        private TextBox textBox4;
         private Label label3;
         private CheckBox checkBox1;
         private TextBox textBox3;
@@ -324,7 +294,7 @@
         private PictureBox pictureBox6;
         private TextBox textBox6;
         private Label label1;
-        private Button button3;
         private Button button2;
+        private Button button3;
     }
 }

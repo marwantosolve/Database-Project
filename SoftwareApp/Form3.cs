@@ -17,11 +17,6 @@ namespace SoftwareApp
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Form5 updateAcc = new Form5();
@@ -32,6 +27,7 @@ namespace SoftwareApp
         {
             Form6 deleteAcc = new Form6();
             deleteAcc.Show();
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -56,6 +52,18 @@ namespace SoftwareApp
         {
             Form8 addSponser = new Form8();
             addSponser.Show();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 index = new Form1();
+            index.Show();
         }
     }
 }

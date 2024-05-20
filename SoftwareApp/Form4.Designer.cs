@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             label5 = new Label();
-            button3 = new Button();
             panel1 = new Panel();
+            button8 = new Button();
             pictureBox2 = new PictureBox();
             button2 = new Button();
             button1 = new Button();
@@ -40,6 +40,7 @@
             button6 = new Button();
             button7 = new Button();
             pictureBox1 = new PictureBox();
+            button3 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -56,27 +57,10 @@
             label5.TabIndex = 15;
             label5.Text = "Welcome, Customer";
             // 
-            // button3
-            // 
-            button3.BackColor = Color.Beige;
-            button3.BackgroundImageLayout = ImageLayout.None;
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(0, 64, 64);
-            button3.Location = new Point(782, -3);
-            button3.Margin = new Padding(0);
-            button3.Name = "button3";
-            button3.Size = new Size(44, 41);
-            button3.TabIndex = 14;
-            button3.Text = "X";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.Teal;
+            panel1.Controls.Add(button8);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
@@ -86,10 +70,27 @@
             panel1.Size = new Size(387, 493);
             panel1.TabIndex = 16;
             // 
+            // button8
+            // 
+            button8.BackColor = Color.FromArgb(0, 64, 64);
+            button8.Cursor = Cursors.Hand;
+            button8.FlatAppearance.BorderColor = Color.FromArgb(0, 64, 64);
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button8.ForeColor = Color.Beige;
+            button8.Location = new Point(98, 389);
+            button8.Name = "button8";
+            button8.Size = new Size(191, 42);
+            button8.TabIndex = 24;
+            button8.Text = "Log Out";
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
+            // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(128, 133);
+            pictureBox2.Location = new Point(120, 122);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(141, 124);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -105,7 +106,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.Beige;
-            button2.Location = new Point(100, 397);
+            button2.Location = new Point(98, 329);
             button2.Name = "button2";
             button2.Size = new Size(191, 42);
             button2.TabIndex = 17;
@@ -122,9 +123,9 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Beige;
-            button1.Location = new Point(104, 324);
+            button1.Location = new Point(98, 267);
             button1.Name = "button1";
-            button1.Size = new Size(187, 42);
+            button1.Size = new Size(191, 42);
             button1.TabIndex = 16;
             button1.Text = "Update Account";
             button1.UseVisualStyleBackColor = false;
@@ -139,7 +140,7 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.Beige;
-            button4.Location = new Point(431, 165);
+            button4.Location = new Point(431, 167);
             button4.Name = "button4";
             button4.Size = new Size(343, 42);
             button4.TabIndex = 17;
@@ -173,7 +174,7 @@
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button6.ForeColor = Color.Beige;
-            button6.Location = new Point(431, 321);
+            button6.Location = new Point(431, 386);
             button6.Name = "button6";
             button6.Size = new Size(343, 42);
             button6.TabIndex = 19;
@@ -190,7 +191,7 @@
             button7.FlatStyle = FlatStyle.Flat;
             button7.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button7.ForeColor = Color.Beige;
-            button7.Location = new Point(431, 394);
+            button7.Location = new Point(431, 313);
             button7.Name = "button7";
             button7.Size = new Size(343, 42);
             button7.TabIndex = 20;
@@ -203,10 +204,28 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(534, 42);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(135, 95);
+            pictureBox1.Size = new Size(135, 100);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 21;
             pictureBox1.TabStop = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Beige;
+            button3.BackgroundImageLayout = ImageLayout.None;
+            button3.Cursor = Cursors.Hand;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
+            button3.ForeColor = Color.FromArgb(0, 64, 64);
+            button3.Location = new Point(791, -4);
+            button3.Margin = new Padding(0);
+            button3.Name = "button3";
+            button3.Size = new Size(34, 39);
+            button3.TabIndex = 64;
+            button3.Text = "X";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
             // 
             // Form4
             // 
@@ -214,13 +233,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
             ClientSize = new Size(820, 483);
+            Controls.Add(button3);
             Controls.Add(pictureBox1);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(panel1);
-            Controls.Add(button3);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form4";
             StartPosition = FormStartPosition.CenterScreen;
@@ -235,7 +254,6 @@
         #endregion
 
         private Label label5;
-        private Button button3;
         private Panel panel1;
         private Button button2;
         private Button button1;
@@ -245,5 +263,7 @@
         private Button button7;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
+        private Button button8;
+        private Button button3;
     }
 }

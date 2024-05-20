@@ -42,13 +42,13 @@
             textBox3 = new TextBox();
             button2 = new Button();
             checkBox1 = new CheckBox();
-            button3 = new Button();
             groupBox1 = new GroupBox();
             radioButton3 = new RadioButton();
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
             pictureBox5 = new PictureBox();
             textBox2 = new TextBox();
+            button3 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -214,24 +214,6 @@
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
-            // button3
-            // 
-            button3.BackColor = Color.Beige;
-            button3.BackgroundImageLayout = ImageLayout.None;
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(0, 64, 64);
-            button3.Location = new Point(782, -3);
-            button3.Margin = new Padding(0);
-            button3.Name = "button3";
-            button3.Size = new Size(44, 41);
-            button3.TabIndex = 11;
-            button3.Text = "X";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
             // groupBox1
             // 
             groupBox1.Controls.Add(radioButton3);
@@ -305,16 +287,34 @@
             textBox2.Size = new Size(331, 30);
             textBox2.TabIndex = 29;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.Beige;
+            button3.BackgroundImageLayout = ImageLayout.None;
+            button3.Cursor = Cursors.Hand;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Verdana", 16.2F, FontStyle.Bold);
+            button3.ForeColor = Color.FromArgb(0, 64, 64);
+            button3.Location = new Point(790, -5);
+            button3.Margin = new Padding(0);
+            button3.Name = "button3";
+            button3.Size = new Size(34, 39);
+            button3.TabIndex = 62;
+            button3.Text = "X";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
             ClientSize = new Size(820, 483);
+            Controls.Add(button3);
             Controls.Add(textBox2);
             Controls.Add(pictureBox5);
             Controls.Add(groupBox1);
-            Controls.Add(button3);
             Controls.Add(checkBox1);
             Controls.Add(button2);
             Controls.Add(textBox3);
@@ -354,12 +354,12 @@
         private TextBox textBox3;
         private Button button2;
         private CheckBox checkBox1;
-        private Button button3;
         private GroupBox groupBox1;
         private RadioButton radioButton3;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
         private PictureBox pictureBox5;
         private TextBox textBox2;
+        private Button button3;
     }
 }
